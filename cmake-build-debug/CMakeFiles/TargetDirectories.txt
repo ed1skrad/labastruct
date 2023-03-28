@@ -1,0 +1,3 @@
+C:/Users/Artem/CLionProjects/labastruct/cmake-build-debug/CMakeFiles/labastruct.dir
+C:/Users/Artem/CLionProjects/labastruct/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Artem/CLionProjects/labastruct/cmake-build-debug/CMakeFiles/rebuild_cache.dir

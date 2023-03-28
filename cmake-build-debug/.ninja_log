@@ -1,0 +1,12 @@
+# ninja log v5
+1	121	7017189571504052	CMakeFiles/labastruct.dir/main.c.obj	f33b37861e66c7d5
+0	136	7017190066791943	CMakeFiles/labastruct.dir/menu.c.obj	5b74bbb6e35be490
+2	178	7017190599751606	CMakeFiles/labastruct.dir/Arrays.c.obj	678c07539d90c4db
+12	181	7017190599791641	CMakeFiles/labastruct.dir/html.c.obj	a35ef7833d595c4a
+21	183	7017190599771598	CMakeFiles/labastruct.dir/Initialization.c.obj	36edd3cb564ddff2
+16	186	7017190599811636	CMakeFiles/labastruct.dir/deleteStruct.c.obj	a0d55b3efd1d13d
+25	188	7017190599851648	CMakeFiles/labastruct.dir/getter.c.obj	4f8351e9840be525
+37	193	7017190599921671	CMakeFiles/labastruct.dir/printStruct.c.obj	59998f881628bcaa
+32	208	7017190600081584	CMakeFiles/labastruct.dir/sortingFiled.c.obj	45c15469ae857d00
+43	218	7017190600181558	CMakeFiles/labastruct.dir/stringWork.c.obj	4cc7e36675578410
+218	365	7017190601611560	labastruct.exe	3d1241cdce3534dd
