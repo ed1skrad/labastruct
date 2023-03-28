@@ -2,10 +2,10 @@
 #include <string.h>
 #include <stdio.h>
 
-int compareName(Computer* a, Computer* b) {
+int compareName(const Computer* a, const Computer* b) {
     return strcmp(a->name, b->name);
 }
-int comparePrice(void *a, void *b) {
+int comparePrice(const void *a, const  void *b) {
     Computer* compa = (Computer*)a;
     Computer* compb = (Computer*)b;
     if(compa->price<compb->price)
@@ -14,14 +14,14 @@ int comparePrice(void *a, void *b) {
         return 1;
     return 0;
 }
-int comparePurpose(Computer * a, Computer * b) {
+int comparePurpose(const Computer * a, const Computer * b) {
     if(a->purpose<b->purpose)
         return -1;
     else if(a->purpose>b->purpose)
         return 1;
     return 0;
 }
-int compareOperationSystem(Computer * a, Computer * b) {
+int compareOperationSystem(const Computer * a, const Computer * b) {
     if(a->operationSystem<b->operationSystem)
         return -1;
     else if(a->operationSystem>b->operationSystem)
@@ -30,11 +30,11 @@ int compareOperationSystem(Computer * a, Computer * b) {
 }
 
 
-int compareCPU(Computer* a,Computer* b) {
+int compareCPU(const Computer* a,const Computer* b) {
     return strcmp(a->CPU, b->CPU);
 }
 
-int compareGPU(Computer* a, Computer* b) {
+int compareGPU(const Computer* a, const Computer* b) {
     return strcmp(a->GPU, b->GPU);
 }
 
