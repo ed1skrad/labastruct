@@ -2,10 +2,10 @@
 #include <string.h>
 #include <stdio.h>
 
-int compareName(const Computer* a, const Computer* b) {
+int compareName(Computer* a, Computer* b) {
     return strcmp(a->name, b->name);
 }
-int comparePrice(const void *a, const void *b) {
+int comparePrice(void *a, void *b) {
     Computer* compa = (Computer*)a;
     Computer* compb = (Computer*)b;
     if(compa->price<compb->price)
@@ -14,14 +14,14 @@ int comparePrice(const void *a, const void *b) {
         return 1;
     return 0;
 }
-int comparePurpose(const Computer * a, const Computer * b) {
+int comparePurpose(Computer * a, Computer * b) {
     if(a->purpose<b->purpose)
         return -1;
     else if(a->purpose>b->purpose)
         return 1;
     return 0;
 }
-int compareOperationSystem(const Computer * a, const Computer * b) {
+int compareOperationSystem(Computer * a, Computer * b) {
     if(a->operationSystem<b->operationSystem)
         return -1;
     else if(a->operationSystem>b->operationSystem)
@@ -30,18 +30,18 @@ int compareOperationSystem(const Computer * a, const Computer * b) {
 }
 
 
-int compareCPU(const Computer* a, const Computer* b) {
+int compareCPU(Computer* a,Computer* b) {
     return strcmp(a->CPU, b->CPU);
 }
 
-int compareGPU(const Computer* a, const Computer* b) {
+int compareGPU(Computer* a, Computer* b) {
     return strcmp(a->GPU, b->GPU);
 }
 
 
 int secondSort(int (*compareTypes[8]) (Computer*, Computer*), Computer* a, Computer* b) {
     int comp = 0;
-    for(int i = 0; i < 8; i++) {
+    for(int i = 0; i < 6; i++) {
         if(compareTypes[i] == NULL || comp != 0) break;
         comp = ((*compareTypes[i])(a, b));
     }
