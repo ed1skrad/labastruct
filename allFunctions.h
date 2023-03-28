@@ -6,7 +6,7 @@
 #define LABSTRUCT_ALLFUNCTIONS_H
 
 #include "struct.h"
-Computer init(char name[100], float price, int purpose, int operationSystem, char CPU[50], char GPU[50], int memoryValue, int numberOfCores);
+Computer init(char name[100], int price, int purpose, int operationSystem, char CPU[50], char GPU[50], int memoryValue, int numberOfCores);
 Computer * createArray(int count);
 void initStruct(Computer ** arr, int* sizeArr);
 int getInt();

@@ -17,7 +17,7 @@ void initStruct(Computer ** arr, int* sizeArr) {
 
     for(int i = 0; i < size; i++) {
         char name[100];
-        float price;
+        int price;
         int purpose;
         int operationSystem;
         char CPU[50];

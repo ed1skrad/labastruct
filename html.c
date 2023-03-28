@@ -5,7 +5,7 @@
 // Created by Artem on 28.02.2023.
 //
 void parseContent(char* ptr, const char* localEnd, Computer** computers, int currPos) {
-    char name[100]; float price = 0.0f; int purpose = 0; int operationSystem = 0; char CPU[50]; char GPU[50]; int memoryValue; int numberOfCores;
+    char name[100]; int price = 0; int purpose = 0; int operationSystem = 0; char CPU[50]; char GPU[50]; int memoryValue = 0; int numberOfCores = 0;
     char buffer[1000]; char typeBuffer[1000];
     ptr = findString(ptr, "<span class=\"result__name\">");
     getTagText(ptr, buffer);
@@ -55,7 +55,7 @@ void parseContent(char* ptr, const char* localEnd, Computer** computers, int cur
     ptr = findString(ptr, "<span data-code=\"");
     getTagText(ptr, buffer);
     removeSpaces(buffer);
-    sscanf(buffer, "%f", &price);
+    sscanf(buffer, "%d", &price);
     (*computers)[currPos] = init(name, price,purpose,operationSystem,CPU,GPU,memoryValue,numberOfCores);
 }
 
