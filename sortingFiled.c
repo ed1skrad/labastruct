@@ -5,12 +5,10 @@
 int compareName(const Computer* a, const Computer* b) {
     return strcmp(a->name, b->name);
 }
-int comparePrice(const void *a, const  void *b) {
-    Computer* compa = (Computer*)a;
-    Computer* compb = (Computer*)b;
-    if(compa->price<compb->price)
+int comparePrice(const Computer *a, const Computer *b) {
+    if(a->price<b->price)
         return -1;
-    else if(compa->price>compb->price)
+    else if(a->price>b->price)
         return 1;
     return 0;
 }
@@ -39,7 +37,7 @@ int compareGPU(const Computer* a, const Computer* b) {
 }
 
 
-int secondSort(int (*compareTypes[8]) (Computer*, Computer*), Computer* a, Computer* b) {
+int secondSort(int (*compareTypes[6]) (Computer*, Computer*), Computer* a, Computer* b) {
     int comp = 0;
     for(int i = 0; i < 6; i++) {
         if(compareTypes[i] == NULL || comp != 0) break;
