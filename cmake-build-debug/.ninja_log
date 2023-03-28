@@ -10,3 +10,14 @@
 32	208	7017190600081584	CMakeFiles/labastruct.dir/sortingFiled.c.obj	45c15469ae857d00
 43	218	7017190600181558	CMakeFiles/labastruct.dir/stringWork.c.obj	4cc7e36675578410
 218	365	7017190601611560	labastruct.exe	3d1241cdce3534dd
+3	153	7017212521641991	CMakeFiles/labastruct.dir/main.c.obj	f33b37861e66c7d5
+24	194	7017212522051913	CMakeFiles/labastruct.dir/getter.c.obj	4f8351e9840be525
+13	196	7017212522081977	CMakeFiles/labastruct.dir/menu.c.obj	5b74bbb6e35be490
+18	199	7017212522111940	CMakeFiles/labastruct.dir/Arrays.c.obj	678c07539d90c4db
+35	205	7017212522171964	CMakeFiles/labastruct.dir/deleteStruct.c.obj	a0d55b3efd1d13d
+40	218	7017212522311889	CMakeFiles/labastruct.dir/html.c.obj	a35ef7833d595c4a
+12	140	7017212620025709	CMakeFiles/labastruct.dir/printStruct.c.obj	59998f881628bcaa
+2	137	7017213401065768	CMakeFiles/labastruct.dir/Initialization.c.obj	36edd3cb564ddff2
+17	144	7017213401125812	CMakeFiles/labastruct.dir/printStruct.c.obj	59998f881628bcaa
+12	152	7017213401215795	CMakeFiles/labastruct.dir/sortingFiled.c.obj	45c15469ae857d00
+152	297	7017213402595766	labastruct.exe	3d1241cdce3534dd

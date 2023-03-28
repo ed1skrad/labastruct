@@ -6,7 +6,7 @@
 #define LABSTRUCT_ALLFUNCTIONS_H
 
 #include "struct.h"
-Computer init(char name[100], int price, int purpose, int operationSystem, char CPU[50], char GPU[50], int memoryValue, int numberOfCores);
+Computer init(char name[100], int price, int purpose, int operationSystem, char CPU[50], char GPU[50]);
 Computer * createArray(int count);
 void initStruct(Computer ** arr, int* sizeArr);
 int getInt();
@@ -17,7 +17,6 @@ char *findString(char *str, const char *substr);
 int getCount(const char *str, const char *substr);
 int contains(const char *str, const char *substr);
 void getTagText(char *tag, char *buffer);
-char* getLeft(const char* str);
 void removeSpaces(char *str);
 void htmlParse(Computer ** computers, int* size);
 void menu();

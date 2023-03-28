@@ -28,20 +28,7 @@ int compareOperationSystem(const Computer * a, const Computer * b) {
         return 1;
     return 0;
 }
-int compareMemoryValue(const Computer * a, const Computer * b) {
-    if(a->memoryValue<b->memoryValue)
-        return -1;
-    else if(a->memoryValue>b->memoryValue)
-        return 1;
-    return 0;
-}
-int compareCores(const Computer * a, const Computer * b) {
-    if(a->numberOfCores<b->numberOfCores)
-        return -1;
-    else if(a->numberOfCores>b->numberOfCores)
-        return 1;
-    return 0;
-}
+
 
 int compareCPU(const Computer* a, const Computer* b) {
     return strcmp(a->CPU, b->CPU);
@@ -67,12 +54,10 @@ void sort(Computer * arr, int size) {
                                                      (int (*)(Computer *, Computer *)) &comparePurpose,
                                                      (int (*)(Computer *, Computer *)) &compareOperationSystem
                                                         , (int (*)(Computer *, Computer *)) &compareCPU,
-                                                     (int (*)(Computer *, Computer *)) &compareCores,
-                                                     (int (*)(Computer *, Computer *)) &compareMemoryValue,
                                                      (int (*)(Computer *, Computer *)) &compareGPU};
     int count;
     printf("Choose sort count: ");
-    while(!scanf("%d", &count) || count < 1 || count > 8) {
+    while(!scanf("%d", &count) || count < 1 || count > 6) {
         printf("Incorrect input!\n");
         rewind(stdin);
         printf("Choose sort count: ");
@@ -82,21 +67,19 @@ void sort(Computer * arr, int size) {
            "2 - Purpose\n"
            "3 - Operation System\n"
            "4 - CPU\n"
-           "5 - Cores\n"
-           "6 - Memory Value\n"
-           "7 - GPU\n");
-    int (*secondTypes[8]) (Computer*, Computer*);
+           "5 - GPU\n");
+    int (*secondTypes[6]) (Computer*, Computer*);
     for(int i = 0; i < count; i++) {
         int ss;
         printf("Choose sort type: ");
-        while(!scanf("%d", &ss) || ss < 0 || ss >= 8) {
+        while(!scanf("%d", &ss) || ss < 0 || ss >= 6) {
             printf("Incorrect input!\n");
             rewind(stdin);
             printf("Choose second sort type: ");
         }
         secondTypes[i] = compareTypes[ss];
     }
-    for(int i = count; i < 8; i++) {
+    for(int i = count; i < 6; i++) {
         secondTypes[i] = NULL;
     }
 

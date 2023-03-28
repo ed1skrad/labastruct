@@ -25,7 +25,5 @@ typedef struct {
     enum OperationSystem operationSystem;
     char CPU[50];
     char GPU[50];
-    int memoryValue;
-    int numberOfCores;
 }Computer;
 #endif //LABSTRUCT_STRUCT_H

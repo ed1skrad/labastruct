@@ -5,7 +5,7 @@
 // Created by Artem on 28.02.2023.
 //
 void parseContent(char* ptr, const char* localEnd, Computer** computers, int currPos) {
-    char name[100]; int price = 0; int purpose = 0; int operationSystem = 0; char CPU[50]; char GPU[50]; int memoryValue = 0; int numberOfCores = 0;
+    char name[100]; int price = 0; int purpose = 0; int operationSystem = 0; char CPU[50]; char GPU[50];
     char buffer[1000]; char typeBuffer[1000];
     ptr = findString(ptr, "<span class=\"result__name\">");
     getTagText(ptr, buffer);
@@ -39,16 +39,8 @@ void parseContent(char* ptr, const char* localEnd, Computer** computers, int cur
                 operationSystem = Linux;
             }
         }
-        else if(contains(typeBuffer, "Объем памяти")) {
-            char* gl = getLeft(buffer);
-            sscanf(gl, "%d", &memoryValue);
-            free(gl);
-        }
         else if(contains(typeBuffer, "Модель видеокарты")) {
             sscanf(buffer, "%s", GPU);
-        }
-        else if(contains(typeBuffer, "Кол-во ядер процессора")) {
-            sscanf(buffer, "%d", &numberOfCores);
         }
         descPtr = findString(descPtr, "<td class='result__attr_var");
     }
@@ -56,7 +48,7 @@ void parseContent(char* ptr, const char* localEnd, Computer** computers, int cur
     getTagText(ptr, buffer);
     removeSpaces(buffer);
     sscanf(buffer, "%d", &price);
-    (*computers)[currPos] = init(name, price,purpose,operationSystem,CPU,GPU,memoryValue,numberOfCores);
+    (*computers)[currPos] = init(name, price,purpose,operationSystem,CPU,GPU);
 }
 
 void htmlParse(Computer ** computers, int* size) {

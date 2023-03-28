@@ -50,7 +50,7 @@ void initStruct(Computer ** arr, int* sizeArr) {
         scanf("%s", CPU);
         printf("GPU");
         scanf("%s", GPU);
-        (*arr)[i] = init(name, price,purpose,operationSystem,CPU,GPU,memoryValue,numberOfCores);
+        (*arr)[i] = init(name, price,purpose,operationSystem,CPU,GPU);
         printf("\n");
     }
 }
